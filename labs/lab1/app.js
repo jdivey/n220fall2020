@@ -16,4 +16,12 @@ class Ground {
     }
 }
 
+
+
+function setup() {
+
+}
+
+function draw() {
 var ground = new Ground(10, 200);
+}
