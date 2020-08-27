@@ -9,19 +9,27 @@ class Raindrop {
 
 }
 
+
+
 class Ground {
-    constructor(height, width) {
-        this.height=10;
-        this.width=200;
+    constructor(coordX, coordY, height, width, color) {
+        this.coordX=coordX;
+        this.coordY=coordY;
+        this.height=height;
+        this.width=width;
+        this.color= color;
     }
 }
+
+var ground = new Ground(100,100, 50, 500, [50, 74, 168]);
 
 
 
 function setup() {
-
+    createCanvas(600,500);
 }
 
 function draw() {
-var ground = new Ground(10, 200);
+    console.log("draw");
+    rect(ground.coordX, ground.coordY, ground.width, ground.height);
 }
