@@ -14,9 +14,6 @@ class Raindrop {
     update() {
         this.cy=this.cy + this.speed;
 
-        if(this.cy >500) {
-            this.cy = 0;
-        }
 
         fill(this.color);
         circle(this.cx, this.cy, this.radius);
@@ -72,7 +69,8 @@ function draw() {
             raindrop.update();
             var isHitGround = isDropHitGround(raindrop.cx, raindrop.cy, ground.coordX, ground.coordY, ground.width, ground.height);
                 if(isHitGround) {
-                    ground.b += 1;
+                    ground.b += 3;
+                    raindrop.cy = 0;
 
         
                 }
