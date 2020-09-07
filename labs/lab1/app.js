@@ -69,7 +69,7 @@ function draw() {
             raindrop.update();
             var isHitGround = isDropHitGround(raindrop.cx, raindrop.cy, ground.coordX, ground.coordY, ground.width, ground.height);
                 if(isHitGround) {
-                    ground.b += 3;
+                    ground.b += 5;
                     raindrop.cy = 0;
 
         
