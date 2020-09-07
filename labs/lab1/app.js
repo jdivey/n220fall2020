@@ -51,8 +51,19 @@ rain[1] = new Raindrop(100, 0, 2, [50, 74, 168]);
 rain[2] = new Raindrop(200, 0, 2, [50, 74, 168]);
 rain[3] = new Raindrop(300, 0, 2, [50, 74, 168]);
 rain[4] = new Raindrop(400, 0, 2, [50, 74, 168]);
+rain[5] = new Raindrop(450, 0, 2, [50, 74, 168]);
+rain[6] = new Raindrop(150, 0, 2, [50, 74, 168]);
+rain[7] = new Raindrop(250, 0, 2, [50, 74, 168]);
+rain[8] = new Raindrop(350, 0, 2, [50, 74, 168]);
+rain[9] = new Raindrop(175, 0, 2, [50, 74, 168]);
+rain[10] = new Raindrop(375, 0, 2, [50, 74, 168]);
+rain[11] = new Raindrop(550, 0, 2, [50, 74, 168]);
+rain[12] = new Raindrop(575, 0, 2, [50, 74, 168]);
+rain[13] = new Raindrop(75, 0, 2, [50, 74, 168]);
+rain[14] = new Raindrop(50, 0, 2, [50, 74, 168]);
+rain[15] = new Raindrop(25, 0, 2, [50, 74, 168]);
 
-
+var rainhits = 0;
 
 function setup() {
     createCanvas(600,500);
@@ -64,15 +75,21 @@ function draw() {
 
     ground.update();
     
+   
     rain.forEach(
         function (raindrop) {
             raindrop.update();
             var isHitGround = isDropHitGround(raindrop.cx, raindrop.cy, ground.coordX, ground.coordY, ground.width, ground.height);
+                
                 if(isHitGround) {
-                    ground.b += 5;
+                     
+                    rainhits += 1;
                     raindrop.cy = 0;
-
-        
+                    console.log(rainhits);
+                    
+                    if(rainhits % 10 == 0) {
+                        ground.b += 10;
+                    }
                 }
         }
     )
