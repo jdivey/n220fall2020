@@ -11,6 +11,36 @@ class Instrument {
 
 }
 
-var music1 = new Instrument("10 hertz", "Woodwinds", "vibrate");
+class Woodwind extends Instrument {
+    constructor(loudness, family, verb) {
+        super(loudness, family, verb)
+        this.family='Woodwind';
+        this.verb='blow';
+    }
+}
 
-music1.play();
+class Percussion extends Instrument {
+    constructor(loudness, family, verb) {
+        super(loudness, family, verb)
+        this.family='Percussion';
+        this.verb='pound';
+    }
+}
+
+class Stringed extends Instrument {
+    constructor(loudness, family, verb) {
+        super(loudness, family, verb)
+        this.family='Stringed';
+        this.verb='pluck';
+    }
+}
+
+var flute = new Woodwind("57 hertz");
+var drum = new Percussion("10 hertz");
+var harp = new Stringed("3 hertz");
+var instruments = [flute, drum, harp];
+
+instruments.forEach(
+    function(instrument) {
+    instrument.play();
+});
