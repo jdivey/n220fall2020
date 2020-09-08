@@ -6,7 +6,7 @@ class Instrument {
     }
 
     play() {
-        console.log(this.family +   ' ' + this.verb + ' at ' + this.loudness);
+        console.log(this.family +   ' ' + this.verb + ' at ' + this.loudness + '.');
     }
 
 }
@@ -15,7 +15,7 @@ class Woodwind extends Instrument {
     constructor(loudness, family, verb) {
         super(loudness, family, verb)
         this.family='Woodwind';
-        this.verb='blow';
+        this.verb='blows';
     }
 }
 
@@ -23,7 +23,7 @@ class Percussion extends Instrument {
     constructor(loudness, family, verb) {
         super(loudness, family, verb)
         this.family='Percussion';
-        this.verb='pound';
+        this.verb='pounds';
     }
 }
 
@@ -31,7 +31,7 @@ class Stringed extends Instrument {
     constructor(loudness, family, verb) {
         super(loudness, family, verb)
         this.family='Stringed';
-        this.verb='pluck';
+        this.verb='plucks';
     }
 }
 
