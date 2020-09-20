@@ -28,12 +28,16 @@ class VendingMachine {
 
     render() {
         return `
-        <div>${this.firstCandy}</div>
-        <div>${this.firstCandyCount}</div>
-        <div>${this.secondCandy}</div>
-        <div>${this.secondCandyCount}</div>
-        <div>${this.firstChips}</div>
-        <div>${this.firstChipsCount}</div>`;
+        <div>#1: ${this.firstCandy}</div>
+        <div>Stock: ${this.firstCandyCount}</div>
+        <br>
+        <div>#2: ${this.secondCandy}</div>
+        <div>Stock: ${this.secondCandyCount}</div>
+        <br>
+        <div>#3: ${this.firstChips}</div>
+        <div>Stock: ${this.firstChipsCount}</div>
+        <br>`;
+
     }
 }
 
@@ -42,17 +46,18 @@ let vendingdiv = document.getElementById("vendingdiv");
 vendingdiv.innerHTML = vendingmac.render();
 
 function buyCandyOne() {
-    vendingmac.buyFirstCandy;
+    vendingmac.buyFirstCandy();
     vendingdiv.innerHTML = vendingmac.render();
+
 }
 
 function buyCandyTwo() {
-    vendingmac.buySecondCandy;
+    vendingmac.buySecondCandy();
     vendingdiv.innerHTML = vendingmac.render();
 }
 
 function buyChipsOne() {
-    vendingmac.buyFirstChips;
+    vendingmac.buyFirstChips();
     vendingdiv.innerHTML = vendingmac.render();
 }
 
