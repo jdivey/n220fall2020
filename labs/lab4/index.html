@@ -9,15 +9,53 @@
     </style>
 </head>
 <body>
-    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302 301"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;}</style></defs>
-        <rect class="cls-1" x="0.5" y="0.5" width="100" height="100"/>
-        <rect class="cls-1" x="100.5" y="200.5" width="100" height="100"/>
-        <rect class="cls-1" x="200.5" y="200.5" width="101" height="100"/>
+    <div id="instructions">
+        <h1>Instructions:</h1>
+        <h3>Click on a square to mark an "X".</h3>
+        <h3>Double-click on a square to mark an "O".</h3>
+    </div>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302 301"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2{stroke:#231f20;stroke-miterlimit:10;}.cls-2{fill:none;}</style></defs>
+        <rect id="recOne" class="cls-1" x="0.5" y="0.5" width="100" height="100"/>
+        <rect id="recTwo" class="cls-1" x="100.5" y="0.5" width="100" height="100"/>
+        <rect id="recThree" class="cls-1" x="201" y="0.5" width="100" height="100"/>
+        <rect id="r" class="cls-1" x="100.5" y="200.5" width="100" height="100"/>
+        <rect id="recThree" class="cls-1" x="200.5" y="200.5" width="101" height="100"/>
         <rect class="cls-1" x="0.5" y="200.5" width="100" height="100"/>
-        <rect class="cls-1" x="200.5" y="100.5" width="101" height="100"/>
+        <rect id="recSix" class="cls-1" x="200.5" y="100.5" width="101" height="100"/>
         <rect class="cls-1" x="100.5" y="100.5" width="100" height="100"/>
-        <rect class="cls-1" x="0.5" y="100.5" width="100" height="100"/>
-        <rect class="cls-1" x="100.5" y="0.5" width="100" height="100"/></svg>
+        <rect id="recFour" class="cls-1" x="0.5" y="100.5" width="100" height="100"/>
+        
+        <path class="cls-1" d="M213,262.5" transform="translate(-112.5 -162)"/>
+        <line id="lineOne" x1="0.5" y1="0.5" x2="100.5" y2="100.5" style="stroke:white;"/>
+        <line id="lineTwo" x1="100.5" y1="0.5" x2="0.5" y2="100.5" style="stroke:white;"/>
+        <line id="lineThree" class="cls-2" x1="100.5" y1="0.5" x2="200.5" y2="100.5" style="stroke:white;"/>
+        <line id="lineFour" class="cls-2" x1="200.5" y1="0.5" x2="100.5" y2="100.5" style="stroke:white;"/>
+        <line id="lineFive" class="cls-2" x1="201" y1="0.5" x2="301" y2="100.5" style="stroke:white;"/>
+        <line id="lineSix" class="cls-2" x1="301" y1="0.5" x2="201" y2="100.5" style="stroke:white;"/>
+        <g id="Layer_2" data-name="Layer 2">
+            <line id="lineSeven" class="cls-2" x1="0.5" y1="101.5" x2="100.5" y2="201.5" style="stroke:white;"/>
+            <line id="lineEight" class="cls-2" x1="0.5" y1="201.5" x2="100.5" y2="101.5" style="stroke:white;"/>
+            <line id="lineNine" class="cls-2" x1="100.5" y1="201.5" x2="201" y2="101.5" style="stroke:white;"/>
+            <line id="lineTen" class="cls-2" x1="200.5" y1="201.5" x2="100.5" y2="101.5" style="stroke:white;"/>
+            <line id="lineEleven" class="cls-2" x1="200.75" y1="101.75" x2="300.75" y2="201.75" style="stroke:white;"/>
+            <line id="lineTwelve" class="cls-2" x1="200.75" y1="201.75" x2="300.75" y2="101.75" style="stroke:white;"/>
+            <line id="lineThirteen" class="cls-2" x1="0.5" y1="202" x2="100.5" y2="302" style="stroke:white;"/>
+            <line id="lineFourteen" class="cls-2" x1="0.5" y1="302" x2="100.5" y2="202" style="stroke:white;"/>
+            <line id="lineFifteen" class="cls-2" x1="100.75" y1="202" x2="200.75" y2="302" style="stroke:white;"/>
+            <line id="lineSixteen" class="cls-2" x1="100.75" y1="302" x2="200.75" y2="202" style="stroke:white;"/>
+            <line id="lineSeventeen" class="cls-2" x1="200.5" y1="202" x2="300.5" y2="302" style="stroke:white;"/>
+            <line id="lineEighteen" class="cls-2" x1="200.5" y1="302" x2="300.5" y2="202" style="stroke:white;"/></g>
+            <g id="Layer_3" data-name="Layer 3">
+                <circle id="circOne" class="cls-2" cx="52.12" cy="53.12" r="48.38" style="stroke:white;"/>
+                <circle id="circTwo" class="cls-2" cx="152.62" cy="51.5" r="48.38" style="stroke:white;"/>
+                <circle id="circThree" class="cls-2" cx="253.13" cy="48.88" r="48.38" style="stroke:white;"/>
+                <circle id="circFour" class="cls-2" cx="55.87" cy="151.75" r="48.38" style="stroke:white;"/>
+                <circle id="circFive" class="cls-2" cx="152.62" cy="149.87" r="48.38" style="stroke:white;"/>
+                <circle id="circSix" class="cls-2" cx="253.13" cy="154.19" r="48.38" style="stroke:white;"/>
+                <circle id="circSeven" class="cls-2" cx="50.5" cy="251.25" r="48.38" style="stroke:white;"/>
+                <circle id="circEight" class="cls-2" cx="151.5" cy="251.25" r="48.38" style="stroke:white;"/>
+                <circle id="circNine" class="cls-2" cx="253.13" cy="252" r="48.38" style="stroke:white;"/></g></svg>
+    </svg>
     <script src="app.js"></script>
 </body>
 </html>
