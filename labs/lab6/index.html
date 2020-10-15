@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        
+    </style>
 </head>
 <body>
     
+    <div id="app">
+        {{message}}
+    
 
+    <ul>
 
+        <book-view
+            v-for="book in books"
+            v-bind:book="book"
+            v-bind:key="book.id">
+            
 
+        </book-view>
+    </ul>
 
+        <button v-on:click="firstBook">The Little Pig</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="app.js"></script>
 </body>
 </html>
