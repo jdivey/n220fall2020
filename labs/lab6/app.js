@@ -1,6 +1,6 @@
 Vue.component("book-view", {
     props: [ "book" ],
-    template: "<li> {{ book.title }} {{ book.cover }} by {{ book.author }}</li>"
+    template: "<li> {{ book.title }} {{ book.cover }} <br> By {{ book.author }}</li>"
 });
 
 
