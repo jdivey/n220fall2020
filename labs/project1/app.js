@@ -42,14 +42,14 @@ class YellowPlayer{
 
 class GameTurn {
     constructor() {
-        this.turn=0;
-        this.turnColor= "white";
-        this.clicked = false;
+        this.turnNumber = 0;
+        this.resetColor= "white";
     }
+
 
     reset() {
         for (let i=0; i < circles.length; i++) {
-            circles[i].style.fill= "white";
+            circles[i].style.fill= this.resetColor;
         }
     }
 
@@ -65,23 +65,24 @@ var redscore = new RedPlayer;
 var yellowscore = new YellowPlayer;
 var gameturn = new GameTurn;
 
+
+
+
 function addColor(newEvent) {
-    if(gameturn.turn%2 === 0 ) {
+    
+    if(gameturn.turnNumber %2 === 0) {
         newEvent.target.style.fill = "yellow";
         TweenMax.from(newEvent.target, {duration: 0.5, y:-162});
-        gameturn.turn += 1;
-        console.log(gameturn.turn);
+        gameturn.turnNumber += 1;
     }else{
         newEvent.target.style.fill = "red";
         TweenMax.from(newEvent.target, {duration: 0.5, y: -162});
-        gameturn.turn += 1;
-        console.log(gameturn.turn);
+        gameturn.turnNumber += 1;
     }
+
+    
+    
 }
-
-
-
-
 
 function gameTime() {
     for (let i=0; i < circles.length; i++) {
@@ -96,7 +97,7 @@ function gameTime() {
 
 
 gameTime();
-console.log(gameturn.turn);
+console.log(gameturn.turnNumber);
 
 
 
